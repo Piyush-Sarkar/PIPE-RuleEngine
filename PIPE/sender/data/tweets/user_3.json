@@ -1,0 +1,16 @@
+{
+  "next_tweet_id": 2,
+  "tweets": [
+    {
+      "id": "3-1",
+      "author_id": 3,
+      "author_name": "sas",
+      "content": "asjdhsakjdh",
+      "created_at": "2026-04-21T18:51:23+00:00",
+      "likes": [
+        2
+      ],
+      "comment_count": 2
+    }
+  ]
+}

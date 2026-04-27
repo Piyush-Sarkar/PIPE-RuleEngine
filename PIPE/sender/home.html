@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login or Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body class="auth-page">
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-left"></div>
+  <div class="bg-orb orb-right"></div>
+
+  <button id="auth-theme-toggle" class="btn subtle theme-floating" type="button">Light Mode</button>
+
+  <main class="auth-card glass">
+    <header class="auth-header">
+      <h1>Welcome Back</h1>
+      <p>Login or create an account to enter your dashboard.</p>
+    </header>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-mode="login" type="button">Login</button>
+      <button class="auth-tab" data-mode="register" type="button">Register</button>
+    </div>
+
+    <form id="login-form" class="auth-form active">
+      <input id="login-username" type="text" placeholder="Username" required />
+      <input id="login-password" type="password" placeholder="Password" required />
+      <button class="btn" type="submit">Login</button>
+    </form>
+
+    <form id="register-form" class="auth-form">
+      <input id="register-display-name" type="text" maxlength="40" placeholder="Display Name" required />
+      <input id="register-username" type="text" placeholder="Username (letters/numbers/_ )" required />
+      <input id="register-password" type="password" minlength="6" placeholder="Password" required />
+      <input id="register-confirm-password" type="password" minlength="6" placeholder="Confirm Password" required />
+      <button class="btn" type="submit">Create Account</button>
+    </form>
+
+    <p id="auth-feedback" class="feedback"></p>
+  </main>
+
+  <script src="{{ url_for('static', filename='auth.js') }}" defer></script>
+</body>
+</html>
