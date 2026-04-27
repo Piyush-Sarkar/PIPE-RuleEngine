@@ -1,0 +1,26 @@
+{
+  "next_tweet_id": 6,
+  "tweets": [
+    {
+      "id": "8-1",
+      "author_id": 8,
+      "author_name": "Shuvojit",
+      "content": "Eager to enter the world of coding with Infosys!",
+      "created_at": "2026-04-25T06:18:10+00:00",
+      "likes": [
+        8,
+        6
+      ],
+      "comment_count": 1
+    },
+    {
+      "id": "8-5",
+      "author_id": 8,
+      "author_name": "Shuvojit",
+      "content": "Can RCB defend their title?",
+      "created_at": "2026-04-26T03:47:11+00:00",
+      "likes": [],
+      "comment_count": 0
+    }
+  ]
+}

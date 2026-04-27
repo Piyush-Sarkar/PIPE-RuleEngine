@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body class="dashboard-page">
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-left"></div>
+  <div class="bg-orb orb-right"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar glass">
+      <div class="brand-wrap">
+        <div class="brand-icon">T</div>
+        <div>
+          <p class="brand-title">Threadline</p>
+          <p class="brand-subtitle">Social Board</p>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button class="menu-item active" data-tab="home">
+          <span>Homepage</span>
+        </button>
+        <button class="menu-item" data-tab="profile">
+          <span>Profile</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-user" id="sidebar-user"></div>
+    </aside>
+
+    <main class="content-area">
+      <header class="topbar glass">
+        <div class="search-wrap">
+          <input id="feed-search" type="search" placeholder="Search posts or people..." autocomplete="off" />
+        </div>
+        <div class="top-actions">
+          <button class="btn subtle" id="theme-toggle" type="button">Light Mode</button>
+          <button class="btn small danger" id="logout-btn" type="button">Logout</button>
+        </div>
+      </header>
+
+      <section id="home-section" class="page-section active">
+        <div class="composer glass">
+          <h2>Share something</h2>
+          <form id="post-form">
+            <textarea id="tweet-input" maxlength="280" placeholder="What is happening?"></textarea>
+            <div class="composer-footer">
+              <p id="tweet-count">0 / 280</p>
+              <button class="btn" id="post-btn" type="submit">Post</button>
+            </div>
+          </form>
+          <p class="feedback" id="post-feedback"></p>
+        </div>
+
+        <div class="feed" id="feed"></div>
+      </section>
+
+      <section id="profile-section" class="page-section">
+        <div class="profile-grid">
+          <article class="profile-card glass">
+            <h2>My Profile</h2>
+            <div id="profile-meta"></div>
+            <div class="stats" id="profile-stats"></div>
+          </article>
+
+          <article class="profile-card glass">
+            <h3>Change Display Name</h3>
+            <form id="name-form" class="stack-form">
+              <input id="display-name-input" type="text" maxlength="40" placeholder="New display name" required />
+              <button class="btn" type="submit">Update Name</button>
+            </form>
+            <p class="feedback" id="name-feedback"></p>
+          </article>
+
+          <article class="profile-card glass">
+            <h3>Change Password</h3>
+            <form id="password-form" class="stack-form">
+              <input id="current-password" type="password" placeholder="Current password" required />
+              <input id="new-password" type="password" placeholder="New password" minlength="6" required />
+              <button class="btn" type="submit">Update Password</button>
+            </form>
+            <p class="feedback" id="password-feedback"></p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='dashboard.js') }}" defer></script>
+</body>
+</html>
